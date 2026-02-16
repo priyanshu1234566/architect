@@ -1,0 +1,374 @@
+/* About Section Styles */
+.about {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); /* Dark gradient for consistency */
+  color: #ffffff;
+  padding: 80px 8%;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1); /* Accent line */
+  animation: slideInLeft 1s ease-out; /* Added slide-in animation for accent line */
+}
+
+.about .heading {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-align: center;
+  animation: fadeInUp 1s ease-out; /* Added fade-in and slide-up animation */
+}
+
+.about .heading i {
+  color: #4ecdc4;
+  margin-right: 0.5rem;
+  animation: bounceIn 1.2s ease-out; /* Added bounce-in for icon */
+}
+
+.about .heading span {
+  color: #4ecdc4;
+}
+
+.about .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about .about-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  animation: fadeIn 1.5s ease-out; /* Added fade-in for main content */
+}
+
+.about .text-content {
+  flex: 1;
+  min-width: 300px;
+  animation: slideInRight 1.5s ease-out; /* Added slide-in from right */
+}
+
+.about .text-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #4ecdc4;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: fadeInUp 1.2s ease-out 0.3s both; /* Staggered animation */
+}
+
+.about .text-content p {
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #cccccc;
+  animation: fadeInUp 1.2s ease-out 0.5s both; /* Staggered animation */
+}
+
+.about .image-box {
+  flex: 0 0 300px;
+  max-width: 300px;
+  margin-bottom: 20px;
+  animation: slideInLeft 1.5s ease-out; /* Added slide-in from left */
+}
+
+.about .image-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  filter: brightness(1); /* Premium look with brightness control */
+}
+
+.about .image-box img:hover {
+  transform: scale(1.05) rotate(1deg); /* Enhanced hover with slight rotation */
+  box-shadow: 0 15px 40px rgba(78, 205, 196, 0.4); /* Glow effect for premium feel */
+  filter: brightness(1.1) saturate(1.2); /* Brightness and saturation boost */
+}
+
+.about .what-i-do h4 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #4ecdc4;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: fadeInUp 1.2s ease-out 0.7s both; /* Staggered animation */
+}
+
+.about .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.about .skill-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  text-align: center;
+  animation: fadeInUp 1s ease-out 0.9s both; /* Staggered fade-in for each item */
+  animation-fill-mode: both;
+}
+
+.about .skill-item:hover {
+  transform: translateY(-10px) scale(1.02); /* Enhanced lift and scale */
+  box-shadow: 0 20px 50px rgba(78, 205, 196, 0.3); /* Premium glow */
+  background: rgba(255, 255, 255, 0.1); /* Slight background change */
+}
+
+.about .skill-item i {
+  font-size: 2rem;
+  color: #4ecdc4;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.about .skill-item:hover i {
+  transform: scale(1.2) rotate(5deg); /* Icon scale and rotate on hover */
+  color: #45b7d1; /* Color shift for premium effect */
+}
+
+.about .skill-item h5 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.about .skill-item:hover h5 {
+  color: #4ecdc4; /* Color change on hover */
+}
+
+.about .skill-item p {
+  color: #cccccc;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.about .skill-item:hover p {
+  color: #ffffff; /* Brighten text on hover */
+}
+
+.about .experience h4 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #4ecdc4;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: fadeInUp 1.2s ease-out 1.1s both; /* Staggered animation */
+}
+
+.about .timeline {
+  position: relative;
+  padding-left: 30px;
+  animation: fadeIn 1.5s ease-out 1.3s both; /* Fade-in for timeline */
+}
+
+.about .timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #4ecdc4;
+  animation: growHeight 2s ease-out 1.5s both; /* Animated line growth */
+}
+
+.about .timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  animation: slideInRight 1s ease-out 1.7s both; /* Slide-in for each item */
+  animation-fill-mode: both;
+}
+
+.about .timeline-item:nth-child(2) {
+  animation-delay: 1.9s; /* Stagger delays */
+}
+
+.about .timeline-item:nth-child(3) {
+  animation-delay: 2.1s;
+}
+
+.about .timeline-dot {
+  position: absolute;
+  left: -22px;
+  top: 10px;
+  width: 12px;
+  height: 12px;
+  background: #4ecdc4;
+  border-radius: 50%;
+  border: 2px solid #1a1a1a;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about .timeline-item:hover .timeline-dot {
+  transform: scale(1.5); /* Scale dot on hover */
+  box-shadow: 0 0 10px rgba(78, 205, 196, 0.8); /* Glow */
+}
+
+.about .timeline-content h5 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.about .timeline-item:hover .timeline-content h5 {
+  color: #4ecdc4; /* Color change on hover */
+}
+
+.about .timeline-content span {
+  color: #cccccc;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.about .timeline-item:hover .timeline-content span {
+  color: #ffffff;
+}
+
+.about .timeline-content p {
+  color: #cccccc;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.about .timeline-item:hover .timeline-content p {
+  color: #ffffff;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes growHeight {
+  from { height: 0; }
+  to { height: 100%; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 5%;
+  }
+
+  .about .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about .image-box {
+    flex: none;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .about .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about .timeline {
+    padding-left: 20px;
+  }
+
+  .about .timeline-dot {
+    left: -17px;
+  }
+
+  /* Reduce animation delays on mobile for faster load */
+  .about .skill-item {
+    animation-delay: 0.5s;
+  }
+
+  .about .timeline-item {
+    animation-delay: 1s;
+  }
+}
+
+@media (max-width: 480px) {
+  .about .heading {
+    font-size: 1.8rem;
+  }
+
+  .about .text-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .about .what-i-do h4,
+  .about .experience h4 {
+    font-size: 1.3rem;
+  }
+}
+
+/* About Section Ends */

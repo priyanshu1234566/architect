@@ -1,0 +1,275 @@
+.testimonials {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); /* Dark gradient for premium feel */
+  color: #ffffff;
+  padding: 5rem 2rem 3rem; /* Increased padding for more breathing room */
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1); /* Accent line for consistency */
+}
+
+.testimonials::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="%23ffffff" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>'); /* Subtle grain texture for premium depth */
+  pointer-events: none;
+  z-index: 0;
+}
+
+.testimonials .heading {
+  text-align: center;
+  font-size: 3rem; /* Larger for impact */
+  margin-bottom: 4rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonials .heading i {
+  color: #4ecdc4;
+  margin-right: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.testimonials .heading span {
+  color: #4ecdc4;
+  position: relative;
+}
+
+.testimonials .heading span::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #4ecdc4, #45b7d1);
+  border-radius: 2px;
+}
+
+.testimonials .container {
+  max-width: 1400px; /* Wider for more testimonials */
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Larger min-width for premium feel */
+  gap: 3rem; /* More gap for elegance */
+  animation: fadeInUp 1s ease-out; /* Subtle entrance animation */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.testimonial-box {
+  background: rgba(255, 255, 255, 0.08); /* Enhanced glassmorphism with higher opacity */
+  border-radius: 15px; /* More rounded for modern look */
+  backdrop-filter: blur(15px); /* Stronger blur */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 2.5rem;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smoother, premium easing */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+}
+
+.testimonial-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(78, 205, 196, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.testimonial-box:hover::before {
+  left: 100%; /* Shine effect on hover */
+}
+
+.testimonial-box:hover {
+  transform: translateY(-10px) scale(1.02); /* Lift and slight scale for premium interaction */
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  border-color: rgba(78, 205, 196, 0.3);
+}
+
+.testimonial-box .quote {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.testimonial-box .quote i {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  color: #4ecdc4;
+  font-size: 2.5rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.testimonial-box:hover .quote i {
+  opacity: 1;
+}
+
+.testimonial-box .quote p {
+  font-style: italic;
+  line-height: 1.8;
+  color: #e0e0e0; /* Lighter for better readability */
+  margin: 0;
+  padding-left: 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.testimonial-box .rating {
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-box .rating i {
+  color: #ffd700; /* Gold for stars */
+  font-size: 1.2rem;
+  margin: 0 0.1rem;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-box:hover .rating i {
+  transform: scale(1.1); /* Slight scale on hover */
+}
+
+.testimonial-box .client-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.testimonial-box .client-info img {
+  width: 70px; /* Slightly larger */
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4ecdc4;
+  transition: transform 0.4s ease, border-color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+}
+
+.testimonial-box:hover .client-info img {
+  transform: scale(1.1);
+  border-color: #45b7d1;
+}
+
+.testimonial-box .client-info .details h4 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #4ecdc4;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.testimonial-box .client-info .details span {
+  font-size: 1rem;
+  color: #cccccc;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .testimonial-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+  }
+
+  .testimonials .heading {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .testimonials .heading {
+    font-size: 2rem;
+  }
+
+  .testimonial-box {
+    padding: 2rem;
+  }
+
+  .testimonial-box .quote p {
+    font-size: 1rem;
+  }
+
+  .testimonial-box .client-info .details h4 {
+    font-size: 1.2rem;
+  }
+
+  .testimonial-box .client-info .details span {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials {
+    padding: 4rem 1rem 2rem;
+  }
+
+  .testimonials .heading {
+    font-size: 1.8rem;
+  }
+
+  .testimonial-box {
+    padding: 1.5rem;
+  }
+
+  .testimonial-box .client-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .testimonial-box .client-info img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .testimonial-box .client-info .details h4 {
+    font-size: 1.1rem;
+  }
+
+  .testimonial-box .client-info .details span {
+    font-size: 0.8rem;
+  }
+}
