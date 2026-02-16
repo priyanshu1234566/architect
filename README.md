@@ -6,6 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+
+### Live veiw
+live veiw  link:https://architect-eight-orcin.vercel.app/
+
 ### `npm start`
 
 Runs the app in the development mode.\
