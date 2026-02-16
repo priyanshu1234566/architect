@@ -18,7 +18,7 @@ const NotFound = () => {
       <section className="footer">
         <div className="box-container">
           <div className="box">
-            <h3>Name of arche</h3>
+            <h3>Name of architect</h3>
             <p>
               Thank you for visiting my personal website.
               Connect with me over socials.
@@ -78,7 +78,7 @@ const NotFound = () => {
         <h1 className="credit">
           Designed with <i className="fa fa-heart pulse"></i> by{" "}
           <a href=" ">
-            Name of arche
+            Name of architect
           </a><br></br><br></br>
           &copy; 2026 by Priyanshu Kumar. All rights reserved.
         </h1>
