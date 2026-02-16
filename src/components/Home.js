@@ -37,7 +37,7 @@ const Home = () => {
   };
 
   return (
-    <section className="home">
+    <section className="home" id="home">
       <div className="slider-container">
         <div
           className="slider"

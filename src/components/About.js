@@ -47,34 +47,38 @@ const About = () => {
                 </div>
               </div>
             </div>
-
-            <div className="experience">
-              <h4>My Experience</h4>
               
-                
+
+              <div className="experience">
+              <h4>My Experience</h4>
+              <div className="timeline">
+                <div className="timeline-item">
+                  <div className="timeline-dot"></div>
                   <div className="timeline-content">
                     <h5>Senior Architect</h5>
                     <span>Urban Designs Inc. - 2020 - Present</span>
                     <p>Led design teams on high-profile projects, achieving LEED certification for 80% of developments and improving client satisfaction.</p>
                   </div>
-                
-                
+                </div>
+                <div className="timeline-item">
+                  <div className="timeline-dot"></div>
                   <div className="timeline-content">
                     <h5>Project Architect</h5>
                     <span>Modern Spaces Ltd. - 2017 - 2020</span>
                     <p>Managed residential and commercial projects from concept to completion, collaborating with engineers and contractors.</p>
                   </div>
-                
-                
-                  
+                </div>
+                <div className="timeline-item">
+                  <div className="timeline-dot"></div>
                   <div className="timeline-content">
                     <h5>Junior Architect</h5>
                     <span>Heritage Builders - 2015 - 2017</span>
                     <p>Assisted in drafting plans and 3D models, gaining expertise in AutoCAD, Revit, and sustainable design principles.</p>
                   </div>
-                
-              
+                </div>
+              </div>
             </div>
+
 
            
           </div>

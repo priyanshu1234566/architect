@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Header.css";
-import logo from "../assests/logo.png";
+import logo from "../assests/logo1.png";
 
 const Header = () => {
   const [show, setShow] = useState(true);
@@ -28,10 +28,11 @@ const Header = () => {
   const navItems = [
     "home",
     "about",
-    "clients",
-    "contact",
-    "projects",
     "services",
+    "projects",
+    "testimonials",
+    "contact",
+
   ];
 
   const scrollToHome = () => {
