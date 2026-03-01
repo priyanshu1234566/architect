@@ -1,60 +1,124 @@
+/* ===============================
+   Home Section - Premium Style
+================================= */
+
 .home {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: #ffffff;
 }
 
+/* Top Accent Line */
+.home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
+  animation: slideInLeft 1s ease-out;
+  z-index: 20;
+}
+
+/* Slider Wrapper */
 .slider-container {
   width: 100%;
-  max-width: 1200px;
-  height: 600px;          /* FIXED HEIGHT */
-  overflow: hidden;
+  height: 100%;
   position: relative;
-  border-radius: 12px;
 }
 
+/* Sliding Track */
 .slider {
   display: flex;
   height: 100%;
-  transition: transform 0.6s ease-in-out;
+  transition: transform 0.8s ease-in-out;
 }
 
+/* Each Slide */
 .slide {
   min-width: 100%;
   height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Image Styling */
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* IMPORTANT: image stays inside container */
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.7);
+  transition: transform 1s ease, filter 0.5s ease;
 }
 
-/* Buttons */
+/* Image Hover Effect */
+.slide:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.9) saturate(1.2);
+}
+
+/* Overlay Content */
+.slide-content {
+  position: absolute;
+  bottom: 20%;
+  left: 8%;
+  z-index: 5;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.slide-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #4ecdc4;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.slide-content p {
+  font-size: 1rem;
+  color: #dddddd;
+}
+
+/* Navigation Buttons */
 .nav-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: #fff;
-  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
   font-size: 22px;
-  padding: 10px;
+  padding: 12px 16px;
   cursor: pointer;
   z-index: 10;
+  border-radius: 50%;
+  transition: all 0.3s ease;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.nav-btn:hover {
+  background: #4ecdc4;
+  color: #1a1a1a;
+  box-shadow: 0 0 15px rgba(78, 205, 196, 0.6);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
 
 /* Indicators */
 .indicators {
   position: absolute;
-  bottom: 15px;
+  bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 8px;
+  gap: 10px;
 }
 
 .indicator {
@@ -62,18 +126,92 @@
   height: 12px;
   border-radius: 50%;
   border: none;
-  background: #bbb;
+  background: rgba(255, 255, 255, 0.4);
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator:hover {
+  background: #4ecdc4;
+  transform: scale(1.2);
 }
 
 .indicator.active {
-  background: #fff;
+  background: #4ecdc4;
+  box-shadow: 0 0 10px rgba(78, 205, 196, 0.8);
 }
 
-/* Play/Pause */
+/* Play/Pause Button */
 .autoplay-toggle {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 5px 10px;
+  top: 15px;
+  right: 20px;
+  padding: 6px 12px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.autoplay-toggle:hover {
+  background: #45b7d1;
+  box-shadow: 0 0 12px rgba(69, 183, 209, 0.6);
+}
+
+/* ===============================
+   Animations
+================================= */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===============================
+   Responsive
+================================= */
+
+@media (max-width: 768px) {
+  .slide-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .slide-content p {
+    font-size: 0.9rem;
+  }
+
+  .nav-btn {
+    font-size: 18px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-content {
+    bottom: 15%;
+  }
+
+  .slide-content h2 {
+    font-size: 1.5rem;
+  }
 }

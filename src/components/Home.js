@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback } from "react";
 import "../styles/Home.css";
 
-import banner1 from "../assests/ban 1.jpg";
-import banner2 from "../assests/ban 2.jpg";
-import banner3 from "../assests/ban 3.jpg";
+import banner1 from "../assests/ban 6.jpg";
+import banner2 from "../assests/ban 7.webp";
+import banner3 from "../assests/ban 8.jpg";
 
 const Home = () => {
   const banners = [banner1, banner2, banner3];
