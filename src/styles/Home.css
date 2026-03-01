@@ -4,11 +4,15 @@
 
 .home {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;              /* fallback */
+  min-height: 100svh;             /* modern small viewport fix */
+  min-height: 100dvh;             /* dynamic viewport fix */
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
   color: #ffffff;
+  display: flex;
+  align-items: center;
 }
 
 /* Top Accent Line */
@@ -213,5 +217,46 @@
 
   .slide-content h2 {
     font-size: 1.5rem;
+  }
+}
+
+
+
+/* ===============================
+   Adaptive Banner Heights
+================================= */
+
+/* Ultra Wide Screens */
+@media (min-width: 1600px) {
+  .home {
+    min-height: 85vh;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) and (max-width: 1599px) {
+  .home {
+    min-height: 90vh;
+  }
+}
+
+/* Laptop */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .home {
+    min-height: 95vh;
+  }
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .home {
+    min-height: 80vh;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .home {
+    min-height: 70vh;
   }
 }
